@@ -1,0 +1,23 @@
+{
+  "name": "logseq-extensions-plus",
+  "version": "0.0.1",
+  "description": "A Logseq plugin to enhance functions of app internal extensions.",
+  "scripts": {
+    "dev": "parcel serve ./index.html --public-url ./ --no-hmr",
+    "build": "parcel build ./index.html --public-url ."
+  },
+  "repository": "https://github.com/xyhp915/logseq-extensions-plus.git",
+  "author": "charlie",
+  "license": "MIT",
+  "private": false,
+  "logseq": {
+    "main": "dist/index.html",
+    "id": "_xyuq9z8le"
+  },
+  "dependencies": {
+    "@logseq/libs": "latest"
+  },
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  }
+}
