@@ -18,17 +18,21 @@ const settingsSchema: Array<SettingSchemaDesc> = [
 function main (baseInfo: LSPluginBaseInfo) {
   const { settings } = baseInfo
 
-  if (settings.katexPhysics) {
-    logseq.Experiments.registerExtensionsEnhancer('katex', async () => {
+  logseq.Experiments.registerExtensionsEnhancer('katex', async () => {
+    if (settings.katexPhysics) {
       await logseq.Experiments.loadScripts(
         './vendors/katex.physics.js',
       )
-    })
-  }
+    }
+  })
 
   logseq.Experiments.registerExtensionsEnhancer('codemirror', async () => {
     await logseq.Experiments.loadScripts(
       './vendors/codemirror.solidity.js'
+    )
+
+    await logseq.Experiments.loadScripts(
+      './vendors/codemirror.elixir.js'
     )
   })
 }
