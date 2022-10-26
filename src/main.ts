@@ -25,6 +25,12 @@ function main (baseInfo: LSPluginBaseInfo) {
       )
     })
   }
+
+  logseq.Experiments.registerExtensionsEnhancer('codemirror', async () => {
+    await logseq.Experiments.loadScripts(
+      './vendors/codemirror.solidity.js'
+    )
+  })
 }
 
 // entry
