@@ -12,7 +12,8 @@
   "private": false,
   "logseq": {
     "main": "dist/index.html",
-    "id": "_xyuq9z8le"
+    "id": "_xyuq9z8le_extensions-plus",
+    "icon": "icon.png"
   },
   "dependencies": {
     "@logseq/libs": "latest"
