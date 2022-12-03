@@ -42,6 +42,7 @@ jobs:
           allowUpdates: true
           draft: false
           prerelease: false
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload zip file
         id: upload_zip
