@@ -9,6 +9,13 @@ A plugin to enhance functions of Logseq's internal extensions.
 
 - [x] [katex-physics](https://github.com/balthild/katex-physics)
 
+
+### Supported syntax highlights for Code Mirror editor
+> ⚠️ The minimal version of Logseq Desktop [0.8.12](https://github.com/logseq/logseq/releases)
+ 
+- [x] [Solidity](https://soliditylang.org/)
+- [x] [Elixir](https://elixir-lang.org/)
+ 
 ### Licence
 
 MIT

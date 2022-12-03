@@ -13,6 +13,15 @@ const settingsSchema: Array<SettingSchemaDesc> = [
     description: 'KaTeX-physics from https://github.com/balthild/katex-physics.',
     default: true,
   },
+  {
+    key: 'cmSyntaxHighlights',
+    type: 'enum',
+    title: 'Supported syntax highlighting for code mirror editor',
+    description: `Should restart app if any options changed.`,
+    default: ['solidity', 'elixir'],
+    enumChoices: ['solidity', 'elixir'],
+    enumPicker: 'checkbox',
+  },
 ]
 
 function main (baseInfo: LSPluginBaseInfo) {
@@ -27,13 +36,17 @@ function main (baseInfo: LSPluginBaseInfo) {
   })
 
   logseq.Experiments.registerExtensionsEnhancer('codemirror', async () => {
-    await logseq.Experiments.loadScripts(
-      './vendors/codemirror.solidity.js'
-    )
+    if (settings.cmSyntaxHighlights?.includes('solidity')) {
+      await logseq.Experiments.loadScripts(
+        './vendors/codemirror.solidity.js',
+      )
+    }
 
-    await logseq.Experiments.loadScripts(
-      './vendors/codemirror.elixir.js'
-    )
+    if (settings.cmSyntaxHighlights?.includes('elixir')) {
+      await logseq.Experiments.loadScripts(
+        './vendors/codemirror.elixir.js',
+      )
+    }
   })
 }
 
