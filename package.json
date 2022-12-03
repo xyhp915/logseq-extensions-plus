@@ -1,6 +1,6 @@
 {
   "name": "logseq-extensions-plus",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Logseq plugin to enhance functions of app internal extensions.",
   "scripts": {
     "dev": "parcel serve ./index.html --public-url ./ --no-hmr",
