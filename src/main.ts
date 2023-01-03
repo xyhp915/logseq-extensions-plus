@@ -18,8 +18,8 @@ const settingsSchema: Array<SettingSchemaDesc> = [
     type: 'enum',
     title: 'Supported syntax highlighting for code mirror editor',
     description: `Should restart app if any options changed.`,
-    default: ['solidity', 'elixir'],
-    enumChoices: ['solidity', 'elixir'],
+    default: ['solidity', 'elixir', 'abap'],
+    enumChoices: ['solidity', 'elixir', 'abap'],
     enumPicker: 'checkbox',
   },
 ]
@@ -45,6 +45,12 @@ function main (baseInfo: LSPluginBaseInfo) {
     if (settings.cmSyntaxHighlights?.includes('elixir')) {
       await logseq.Experiments.loadScripts(
         './vendors/codemirror.elixir.js',
+      )
+    }
+
+    if (settings.cmSyntaxHighlights?.includes('abap')) {
+      await logseq.Experiments.loadScripts(
+        './vendors/codemirror.abap.js',
       )
     }
   })
