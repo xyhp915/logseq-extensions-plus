@@ -15,6 +15,7 @@ A plugin to enhance functions of Logseq's internal extensions.
  
 - [x] [Solidity](https://soliditylang.org/)
 - [x] [Elixir](https://elixir-lang.org/)
+- [x] [ABAP](https://en.wikipedia.org/wiki/ABAP)
  
 ### Licence
 
