@@ -16,7 +16,7 @@
     "icon": "icon.png"
   },
   "dependencies": {
-    "@logseq/libs": "0.0.14"
+    "@logseq/libs": "0.2.0@next"
   },
   "devDependencies": {
     "parcel": "2.8.0"
